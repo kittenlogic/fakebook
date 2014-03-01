@@ -16,12 +16,8 @@
  	padding-top: 40px;
  }
 
-#notice {
-	padding-top: 60px;
-}
-
-#alert {
-	padding-top: 60px;
+.alert {
+	margin-top: 20px;
 }
 
 /* User sign in and sign forms. */
