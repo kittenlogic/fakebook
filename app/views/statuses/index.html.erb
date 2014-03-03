@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-md-5">
-    <h1>Spaaaaaaaaaaaaaaaaaaaaaaaam!</h1>
+    <h1>Spaaaaaaaaaaaaaaaaaaaaaaa@m!</h1>
     <img src="http://community.xmatters.com/servlet/JiveServlet/showImage/38-1345-5252/spam.jpg"/>
   </div>
 
   <div class="col-md-4 col-md-offset-3 border-form-div">
-    <%= link_to "Trash it up!", new_status_path, class: "btn btn-warning"  %>
+    <%= link_to "More meat!", new_status_path, class: "btn btn-warning"  %>
 
     <% @statuses.each do |status| %>
     <div class="status">
@@ -13,9 +13,11 @@
       <p><%= status.content %></p>
       <div class="meta">
         <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
-        <span class="admin"> |
+        <span class="admin"> 
+          <% if current_user == status.user %> |
           <%= link_to "Edit", edit_status_path(status) %> |
           <%= link_to "Delete", status, method: :delete, data: {confirm: "Are you sure you want to delete this status?"} %>
+          <% end %>
         </span>  
       </div>  
     </div>  
