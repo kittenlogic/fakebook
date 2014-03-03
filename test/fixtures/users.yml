@@ -2,4 +2,10 @@ emily:
   first_name: "Emily"
   last_name: "Martinez"
   email: "mle626@gmail.com"
-  profile_name: "Emily"
+  profile_name: "emilymartinez"
+
+josh:
+  first_name: "Josh"
+  last_name: "Sigman"
+  email: josh@josh.com
+  profile_name: "joshsigman"
