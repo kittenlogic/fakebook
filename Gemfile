@@ -13,10 +13,15 @@ gem 'simple_form'
 gem "bootstrap-sass", "~> 3.1.1.0"
 gem 'rails_12factor' 
 gem 'jbuilder', '~> 1.2'
+gem 'protected_attributes'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test do
+	gem 'shoulda'
 end
 
 group :development, :test do
