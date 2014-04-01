@@ -7,5 +7,11 @@ emily:
 josh:
   first_name: "Josh"
   last_name: "Sigman"
-  email: josh@josh.com
+  email: "josh@josh.com"
   profile_name: "joshsigman"
+
+bowie:
+  first_name: "David"
+  last_name: "Bowie"
+  email: "david@bowie.com"
+  profile_name: "davidbowie"
