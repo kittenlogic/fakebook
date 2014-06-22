@@ -52,6 +52,10 @@ class UserTest < ActiveSupport::TestCase
     assert users(:emily).friends.include?(users(:bowie))
   end
 
+  test "that calling to_param on a user returns the profile_name" do
+    assert_equal "emilymartinez", users(:emily).to_param
+  end
+
  #  test "a user can have a correctly formatted profile name" do
  #    user = User.new(first_name: 'Emily', last_name: 'Martinez', email: 'mle626@gmail.com')
  #    user.password = user.password_confirmation = "password"

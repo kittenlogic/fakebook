@@ -13,7 +13,8 @@ gem 'simple_form'
 gem "bootstrap-sass", "~> 3.1.1.0"
 gem 'rails_12factor' 
 gem 'jbuilder', '~> 1.2'
-gem 'protected_attributes'
+gem 'state_machine'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

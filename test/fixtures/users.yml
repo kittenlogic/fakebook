@@ -3,6 +3,7 @@ emily:
   last_name: "Martinez"
   email: "mle626@gmail.com"
   profile_name: "emilymartinez"
+  encrypted_password: $2a$10$Fh/Hm8RxDsuPTeBUr6864.GARlcmt7zF2WspaXGr3BIv2C27N.osq
 
 josh:
   first_name: "Josh"

@@ -14,4 +14,26 @@ class UserFriendshipTest < ActiveSupport::TestCase
 		UserFriendship.create user_id: users(:emily).id, friend_id: users(:bowie).id
 		assert users(:emily).friends.include?(users(:bowie))
 	end
+
+	context "a new instance" do
+		setup do
+			@user_friendship = UserFriendship.new user: users(:emily), friend: users(:bowie)	
+		end
+
+		should "have a pending state" do
+			assert_equal 'pending', @user_friendship.state
+		end
+	end
+
+  context "#send_request_email" do
+  	setup do
+  		@user_friendship = UserFriendship.create user: users(:emily), friend: users(:bowie)
+  	end
+
+  	should "send an email" do 
+  		assert_difference 'ActionMailer::Base.deliveries.size', 1 do 
+  			@user_friendship.send_request_email
+  		end
+  	end		
+  end
 end
